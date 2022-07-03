@@ -191,14 +191,14 @@ class GameViewController: UIViewController {
         }
         
         dealButton.snp.makeConstraints { make in
-            make.top.equalTo(cardsStackView.snp_bottomMargin).inset(-30)
+            make.top.equalTo(cardsStackView.snp_bottomMargin).inset(-100)
             make.centerX.equalToSuperview()
             make.width.equalTo(123)
             make.height.equalTo(46.5)
         }
-        
+    
         playerNameScoreView.snp.makeConstraints { make in
-            make.top.equalTo(dealButton.snp_bottomMargin).inset(-50)
+            make.top.equalTo(dealButton.snp_bottomMargin).inset(70)
             make.left.equalToSuperview().inset(20)
             make.height.equalTo(100)
             make.width.equalTo(80)
@@ -215,7 +215,7 @@ class GameViewController: UIViewController {
         }
         
         cupNameScoreView.snp.makeConstraints { make in
-            make.top.equalTo(dealButton.snp_bottomMargin).inset(-50)
+            make.top.equalTo(dealButton.snp_bottomMargin).inset(70)
             make.right.equalToSuperview().inset(20)
             make.height.equalTo(100)
             make.width.equalTo(80)
@@ -233,7 +233,7 @@ class GameViewController: UIViewController {
         
         drawLabel.snp.makeConstraints { make in
             make.centerX.equalToSuperview()
-            make.top.equalTo(dealButton.snp_bottomMargin).inset(-75)
+            make.top.equalTo(dealButton.snp_bottomMargin).inset(105)
             make.width.equalTo(80)
         }
         
