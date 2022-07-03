@@ -61,6 +61,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
         view.addSubview(infoLabel)
         view.addSubview(nameTextField)
         view.addSubview(newGameButton)
+        navigationController?.navigationBar.tintColor = UIColor.systemGreen
         nameTextField.delegate = self
         allEdits()
         
