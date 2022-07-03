@@ -8,7 +8,7 @@
 import UIKit
 import SnapKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UITextFieldDelegate {
     
     lazy var backgroundImage: UIImageView = {
         let image = UIImageView()
@@ -61,13 +61,21 @@ class ViewController: UIViewController {
         view.addSubview(infoLabel)
         view.addSubview(nameTextField)
         view.addSubview(newGameButton)
-        
-        backgroundImage.frame = view.bounds
-        
+        nameTextField.delegate = self
         allEdits()
+        
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return (true)
     }
 
     func allEdits() {
+        backgroundImage.snp.makeConstraints { make in
+            make.top.bottom.left.right.equalToSuperview().inset(0)
+        }
+        
         logoImage.snp.makeConstraints { make in
             make.centerX.equalToSuperview()
             make.top.equalToSuperview().inset(130)
